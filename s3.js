@@ -12,6 +12,7 @@ function toggleTheme() {
     }
 }
 
+
 function validateForm() {
     let isValid = true;
 
@@ -19,6 +20,13 @@ function validateForm() {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
     const rePassword = document.getElementById("retype-password").value;
+
+    sessionStorage.setItem('name',name);
+    sessionStorage.setItem('email',email);
+    sessionStorage.setItem('password',password);
+    sessionStorage.setItem('rePassword',rePassword);
+
+
 
     const nameError = document.getElementById("nameError");
     const emailError = document.getElementById("emailError");
@@ -68,4 +76,11 @@ function validateForm() {
     }
 
     return isValid;
+}
+function setinput(){
+    
+    let name =sessionStorage.getItem('name');
+    let email=sessionStorage.getItem('email');
+    let password=sessionStorage.getItem('password');
+    let repassword=sessionStorage.getItem('rePassword');
 }
