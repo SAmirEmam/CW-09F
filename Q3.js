@@ -1,5 +1,5 @@
 let login = true
-if (login != true) {
+if (login == true) {
     let firstlogin = true
     setCookie("firstlogin", firstlogin, 1)
 }
@@ -27,4 +27,6 @@ function getCookie(cname) {
     return "";
 }
 let cookie = getCookie("firstlogin")
-console.log(cookie);
+if(!cookie) {
+    alert('login again');
+}
