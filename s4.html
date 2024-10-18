@@ -1,0 +1,34 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body id="body">
+
+
+    <script>
+        let site = document.getElementById('body');
+
+        function randomColor() {
+            const letters = '0123456789ABCDEF';
+            let sharp = '#';
+            for (let i = 0; i < 6; i++) {
+                sharp += letters[Math.floor(Math.random() * 16)];
+            }
+            return sharp;
+        }
+        // console.log(randomColor());
+        // setInterval()
+        function changeColoe() {
+            let color = randomColor()
+            site.style.backgroundColor = color;
+        }
+        setInterval(changeColoe, 3000);
+    </script>
+
+</body>
+
+</html>
