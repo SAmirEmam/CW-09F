@@ -1,5 +1,15 @@
+if(localStorage.getItem('theme') == 'dark'){
+    document.body.classList.toggle('dark-theme');
+}
+
 function toggleTheme() {
     document.body.classList.toggle('dark-theme');
+    if(localStorage.getItem('theme') == 'light'){
+        localStorage.setItem('theme', 'dark');
+    }
+    else{
+        localStorage.setItem('theme', 'light');
+    }
 }
 
 function validateForm() {
